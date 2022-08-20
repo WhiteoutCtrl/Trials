@@ -84,7 +84,6 @@ ol, ul {
 		  background-color: rgb(53, 119, 53);
 		  }
   @media only screen and (max-width: 750px) {
-	/* For mobile phones: */
 	[class*="joy-"] {
 	  width: 100%;
 	}
