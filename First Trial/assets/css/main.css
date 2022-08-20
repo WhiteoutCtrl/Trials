@@ -47,6 +47,50 @@ p4 {
 ol, ul {
 	list-style: none;
 }
+* {
+	box-sizing: border-box;
+  }
+  .john:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+  .joy-1 {
+	float: left;
+	width: 16.66%;
+	padding: 10px;
+	height: 70px; 
+	background-color: rgb(243, 77, 77);
+  }
+  .joy-2 {
+   float: left;
+	width: 25%;
+	padding: 10px;
+	height: 70px; 
+	background-color: rgb(93, 93, 231);
+  }
+  .joy-3 {
+  float: left;
+	width: 33.33%;
+	padding: 10px;
+	height: 70px; 
+	background-color: rgb(44, 43, 43);
+	}
+	.joy-4 {
+		float: left;
+		  width: 25%;
+		  padding: 10px;
+		  height: 70px; 
+		  background-color: rgb(53, 119, 53);
+		  }
+  @media only screen and (max-width: 750px) {
+	/* For mobile phones: */
+	[class*="joy-"] {
+	  width: 100%;
+	}
+  }
+
+
 
 blockquote, q {
 	quotes: none;
