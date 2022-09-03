@@ -1,0 +1,214 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Johnson Ops</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <script>
+			function checkPassword(form) {
+                password1 = form.password1.value;
+                password2 = form.password2.value;
+  				if (password1 == '')
+                    alert ("Please enter Password");
+                      
+                
+                else if (password2 == '')
+                    alert ("Please enter confirm password");
+                      
+                    
+                else if (password1 != password2) {
+                    alert ("💀TRY AGAIN!💀")
+                    return false;
+                }
+  
+                
+                else{
+                    alert("⭐ITS A MATCH!⭐")
+                    return true;
+                }
+            }
+            </script>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+ 
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/ninja.png" alt="" /></span><span class="title">Johnson Logsin</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="generic.html">Food</a></li>
+							<li><a href="generic2.html">Geometry</a></li>
+							<li><a href="generic3.html">Forms</a></li>
+                            <li><a href="generic4.html">Media Queries</a></li>
+							<li><a href="generic5.html">Operators</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Login Page</h1>
+							<!--<iframe width="1600" height="500" src="https://youtube.com/embed/mDqkxZ3UVzc?autoplay=1"></iframe>-->
+							<!--<span class="image main"><img src="images/max.png" alt="geometrybg" /></span>-->
+							<div class="block-step-by-step" id="step-by-step"><span>Step-by-Step Guide</span></div><br>
+								<div class="container">
+									<form onSubmit = "return checkPassword(this)">
+								  		<label for="usrname">Username</label>
+								  		<input type="text" id="usrname" name="usrname" required>
+							  
+								  		<label for="psw">Password</label>
+								  		<input type="password" id="psw" name="password1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="passw1" required>
+								  
+								  		<label for="psw">Confirm Password</label>
+								  		<input type="password" id="psw" name="password2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="passw2" required>
+								  
+								  		<input type="submit"  class="submit" value="Submit">
+									</form>
+							 </div>
+							  
+							  <div id="message">
+									<h3>Password must contain the following:</h3>
+									<p id="letter" class="invalid"><b>A lowercase letter</b></p>
+									<p id="capital" class="invalid"><b>A capital (uppercase) letter</b></p>
+									<p id="number" class="invalid"><b>A number</b></p>
+									<p id="length" class="invalid"><b>Minimum 8 characters</b></p>
+							  </div>
+							  <script>
+								var myInput = document.getElementById("psw");
+								var letter = document.getElementById("letter");
+								var capital = document.getElementById("capital");
+								var number = document.getElementById("number");
+								var length = document.getElementById("length");
+								
+								
+								myInput.onfocus = function() {
+								  document.getElementById("message").style.display = "block";
+								}
+								
+								
+								myInput.onblur = function() {
+								  document.getElementById("message").style.display = "none";
+								}
+								
+								
+								myInput.onkeyup = function() {
+								 
+								  var lowerCaseLetters = /[a-z]/g;
+								  if(myInput.value.match(lowerCaseLetters)) {  
+									letter.classList.remove("invalid");
+									letter.classList.add("valid");
+								  } else {
+									letter.classList.remove("valid");
+									letter.classList.add("invalid");
+								  }
+								  
+								  
+								  var upperCaseLetters = /[A-Z]/g;
+								  if(myInput.value.match(upperCaseLetters)) {  
+									capital.classList.remove("invalid");
+									capital.classList.add("valid");
+								  } else {
+									capital.classList.remove("valid");
+									capital.classList.add("invalid");
+								  }
+								
+								  
+								  var numbers = /[0-9]/g;
+								  if(myInput.value.match(numbers)) {  
+									number.classList.remove("invalid");
+									number.classList.add("valid");
+								  } else {
+									number.classList.remove("valid");
+									number.classList.add("invalid");
+								  }
+								  
+								 
+								  if(myInput.value.length >= 8) {
+									length.classList.remove("invalid");
+									length.classList.add("valid");
+								  } else {
+									length.classList.remove("valid");
+									length.classList.add("invalid");
+								  }
+								}
+								</script>
+
+
+                            
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>To know get in touch with me:-</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Enter your name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Enter your email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Write your message here"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="DROP" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://www.twitter.com/" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.facebook.com/" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://github.com/Johnsonjoy13/firstcode/tree/main" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://globfone.com/" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+									<li><a href="https://www.gmail.com/" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

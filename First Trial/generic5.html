@@ -1,28 +1,71 @@
 <!DOCTYPE HTML>
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
-		<title>Johnson Shapes</title>
+		<title>Johnson Ops</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <script>
+            function add()
+            {
+                let num1,num2,sum;
+                num1= document.getElementById("num1").value;
+                num2= document.getElementById("num2").value;
+                sum=parseInt(num1)+parseInt(num2);
+                document.getElementById("result").value=sum;
+                console.log("sum -"+sum);
+            }
+            function sub()
+            {
+                let num1,num2,sub;
+                num1= document.getElementById("num1").value;
+                num2= document.getElementById("num2").value;
+                sub=parseInt(num1)-parseInt(num2);
+                document.getElementById("result").value=sub;
+                console.log("sub -"+sub);
+            }
+            function mult()
+            {
+                let num1,num2,mult;
+                num1= document.getElementById("num1").value;
+                num2= document.getElementById("num2").value;
+                mult=parseInt(num1)*parseInt(num2);
+                document.getElementById("result").value=mult;
+                console.log("mult -"+mult);
+            }
+            function div()
+            {
+                let num1,num2,div;
+                num1= document.getElementById("num1").value;
+                num2= document.getElementById("num2").value;
+                div=parseInt(num1)/parseInt(num2);
+                document.getElementById("result").value=div;
+                console.log("div -"+div);
+            }
+            function mod()
+            {
+                let num1,num2,mult;
+                num1= document.getElementById("num1").value;
+                num2= document.getElementById("num2").value;
+                mod=parseInt(num1)%parseInt(num2);
+                document.getElementById("result").value=mod;
+                console.log("mod -"+mod);
+            }
+        </script>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
 			<div id="wrapper">
-
+ 
 				<!-- Header -->
 					<header id="header">
 						<div class="inner">
 
 							<!-- Logo -->
 								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/ninja.png" alt="" /></span><span class="title">Johnson Shapes</span>
+									<span class="symbol"><img src="images/ninja.png" alt="" /></span><span class="title">Johnson Ops</span>
 								</a>
 
 							<!-- Nav -->
@@ -43,50 +86,28 @@
 							<li><a href="generic.html">Food</a></li>
 							<li><a href="generic2.html">Geometry</a></li>
 							<li><a href="generic3.html">Forms</a></li>
-							<li><a href="generic4.html">Media Queries</a></li>
+                            <li><a href="generic4.html">Media Queries</a></li>
 							<li><a href="generic5.html">Operators</a></li>
-
 						</ul>
 					</nav>
 
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>SHAPES</h1>
+							<h1>Operators</h1>
 							<!--<iframe width="1600" height="500" src="https://youtube.com/embed/mDqkxZ3UVzc?autoplay=1"></iframe>-->
 							<!--<span class="image main"><img src="images/max.png" alt="geometrybg" /></span>-->
 							<div class="block-step-by-step" id="step-by-step"><span>Step-by-Step Guide</span></div><br>
-							<!--<p><h1>How To Make Masala Dosa ?</h1></p><p><h3><strong>Step #1 - Making masala dosa batter</strong></h3></p>
-							<br>
-							<p1>
-								1. First take all the ingredients in three bowls.Note that these ingredients are easily<br>available online or any Indian Asian grocery store if you live outside India.
-								<li>1.5 cups idli rice or parboiled rice in one bowl. You can also use regular short-<br>grained to medium-grained rice like sona masuri or parmal.</li>
-								<li>½ cup urad dal (husked black gram) + 1 tablespoon chana dal (husked and split<br>bengal gram) + 20 methi seeds (fenugreek seeds) in a second bowl</li>
-								<li>⅓ cup thick poha (flattened rice) in a third bowl.</li>
-								<img width="650" height="433" src="images/MD/01.png">
-							</p1>
-							<p2><br>
-								2. Rinse the lentils and fenugreek seeds a couple of times. Then soak them in 1 cup water for 4 to 5<br>hours.
-								<br>
-								<strong> TIP:</strong> Ensure to use urad dal that are fresh and within their shelf period.
-								<img width="650" height="433" src="images/MD/02.png">
-							</p2>
-							<p3><br>
-								3. Rinse the rice a couple of times and keep aside.<br>
-								<img width="650" height="433" src="images/MD/03.png">
-							</p3>
-							<p4><br>
-								4. Rinse flattened rice once or twice and then add to the rice.<br>
-								<img width="650" height="433" src="images/MD/04.png">
-							</p4>-->
-                            <h2><u>Square of 300px</u></h2>
-                            <div class="square"></div>
-                            <br>
-                            <h2><u>Circle of 300px</u></h2>
-                            <div class="circle"></div>
-                            <br>
-                            <h2><u>Circle in square</u></h2>
-                            <div class="square1"><div class="circle1"></div></div>
+							<input type="text" id="num1" placeholder="Enter 1st number"><br>
+                            <input type="text" id="num2" placeholder="Enter 2nd number"><br>
+                            <button onclick="add()">Addition</button>
+                            <button onclick="sub()">Subtraction</button>
+                            <button onclick="mult()">Multiplication</button>
+                            <button onclick="div()">Division</button>
+                            <button onclick="mod()">Modulus</button><br><br>
+                            <input type="text" id="result" placeholder="Result">
+
+
                             
 						</div>
 					</div>
