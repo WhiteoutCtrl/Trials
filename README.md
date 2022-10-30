@@ -1,4 +1,4 @@
-[![MasterHead](https://1.bp.blogspot.com/-7A4WynwLsMw/XbBpCXG8fHI/AAAAAAAAMt4/uOa1bpLskYgrwGbllhSu2SDj_Mig8SXJQCLcBGAsYHQ/s1600/2000_600px.gif)](https://whiteoutctrl.io)
+[![MasterHead]()](https://whiteoutctrl.io)
 <h1 align="center">Hi 👋, I'm Johnson Joy</h1>
 <h3 align="center">A passionate developer from Manglore</h3>
 <img align="right" alt="Coding" width="400" src="https://sagaratechnology.com/blog/wp-content/uploads/2022/03/service2.gif">
